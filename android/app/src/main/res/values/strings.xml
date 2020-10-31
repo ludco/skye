@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">skye</string>
+    <string name="title_activity_main">skye</string>
+    <string name="package_name">com.skye.app</string>
+    <string name="custom_url_scheme">com.skye.app</string>
+    <string name="facebook_app_id">300870814215575</string>
+    <string name="fb_login_protocol_scheme">fb300870814215575</string>
+    <string name="server_client_id">539463003213-fdnud09ul9gef64p4oq9lmsj6c89h5n1.apps.googleusercontent.com</string>
+    
+</resources>

@@ -1,0 +1,21 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "skye",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "GoogleAuth": {
+      "scopes": [
+        "profile",
+        "email"
+      ],
+      "serverClientId": "539463003213-fdnud09ul9gef64p4oq9lmsj6c89h5n1.apps.googleusercontent.com",
+      "forceCodeForRefreshToken": true
+    }
+  },
+  "cordova": {}
+}
