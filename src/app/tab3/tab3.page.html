@@ -13,5 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-button
+  size="small"
+  expand="block"
+  (click)="FBSignOut()"
+  color="secondary"
+>
+  <ion-icon slot="start" name="logo-facebook"></ion-icon>
+  Se déconnecter de Facebook
+</ion-button>
 </ion-content>

@@ -1,26 +1,24 @@
 <ion-content>
 
-  <ion-text>zut</ion-text>
-  <ion-img [src]="../../assets/logo.png"></ion-img>
-  <ion-grid>
-   
-    <app-manual-signin></app-manual-signin>
-    <app-fbsignin></app-fbsignin>
-    <app-google-signin></app-google-signin>
-    <ion-row class="ion-justify-content-between ion-margin ion-padding ion-align-items-end">
-      <ion-col size="12" class="ion-text-center ion-align-self-end"
-      >
-        <ion-button fill="clear" [routerLink]="['signup']">
-          <ion-text>
+  <img src="assets/logo.png" class="ion-justify-content-between ion-margin ion-padding" />
+  <ion-grid>    
+    <ion-row class="ion-justify-content-between ion-margin-top ion-padding-top ion-align-items-end">
+      <ion-col >
+         
+        <app-manual-signin></app-manual-signin>
+        <app-fbsignin></app-fbsignin>
+        <app-google-signin></app-google-signin>
+    
+        <ion-button fill="clear" expand="block" class="ion-padding ion-margin" [routerLink]="['signup']">
+          <ion-text color="light">
             Nouveau sur Skye ?
           </ion-text>
-          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <ion-icon name="chevron-forward-outline" color="light"></ion-icon>
           
         </ion-button>
        
       </ion-col>
     </ion-row>
-
-    
   </ion-grid>
+  
 </ion-content>
