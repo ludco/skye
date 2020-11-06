@@ -53,6 +53,15 @@
 			<array>
 				<string>fb300870814215575</string>
 			</array>
+			<key>CFBundleTypeRole</key>
+           <string>Editor</string>
+           <key>CFBundleURLName</key>
+           <string>REVERSED_CLIENT_ID</string>
+           <key>CFBundleURLSchemes</key>
+           <array>
+               <string>com.googleusercontent.apps.539463003213-hst2ac2ffdvsgu11clfo3099fdchdhha</string>
+           </array>
+
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
