@@ -24,9 +24,10 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     return new Promise((resolve) => {
-      this.nativeStorage.getItem('skyeToken').then(
+      console.log('je garde!!!');
+      this.nativeStorage.getItem('userToken').then(
         (data) => {
-          console.log(data);
+          console.log('in guard', data);
           resolve(true);
         },
         (error) => {

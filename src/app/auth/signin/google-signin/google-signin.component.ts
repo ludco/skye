@@ -3,6 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import '@codetrix-studio/capacitor-google-auth';
 import { Plugins } from '@capacitor/core';
+import { User } from 'src/app/models/User';
+import { UserLoad } from 'src/app/stores/user.store';
+import { Store } from '@ngxs/store';
+import { AuthService } from 'src/app/services/auth.service';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 
 @Component({
@@ -12,17 +17,29 @@ import { Plugins } from '@capacitor/core';
 })
 export class GoogleSigninComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  user: User = new User();
+  constructor(private router: Router,
+              private store: Store,
+              private authService: AuthService,
+              private nativeStorage: NativeStorage) { }
 
   ngOnInit() {}
 
   async GoogleSignIn(){
-    console.log('zut');
     try{
-    const googleUser = await Plugins.GoogleAuth.signIn({
+    const googleUser: any = await Plugins.GoogleAuth.signIn({
       value: 'profile email'
     });
     console.log(googleUser);
+    this.nativeStorage
+          .setItem('userToken', {
+            token: googleUser.idToken,
+            id: googleUser.userId,
+            origin : 'Google'
+          });
+    this.store.dispatch(new UserLoad( this.authService.setGoogleUser(googleUser)));
+    this.router.navigate(['tabs/']);
+
     }
     catch (e){ console.log('gogogo', e); }
   }

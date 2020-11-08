@@ -24,4 +24,12 @@
   <app-root></app-root>
 </body>
 
+<!-- angular 6+ global is undefined fix: -->
+<script>
+  if (global === undefined) {
+    var global = window;
+  }
+</script>
+<!-- angular 6+ global is undefined fix end-->
+
 </html>
