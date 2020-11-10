@@ -15,6 +15,8 @@ import { UserStore } from './stores/user.store';
 import { RemoteDevToolsProxy } from './../../devtool-hack/redux-devtool-hack';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 
+import { Shake } from '@ionic-native/shake/ngx';
+
 // Register our remote devtools if we're on-device and not in a browser
 // tslint:disable: no-string-literal
 if (!window['devToolsExtension'] && !window['__REDUX_DEVTOOLS_EXTENSION__']) {
@@ -42,6 +44,7 @@ if (!window['devToolsExtension'] && !window['__REDUX_DEVTOOLS_EXTENSION__']) {
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     NativeStorage,
+    Shake
   ],
   bootstrap: [AppComponent]
 })

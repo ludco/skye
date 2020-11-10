@@ -1,12 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Shake } from '@ionic-native/shake/ngx';
+import {responses} from '../shared/datas';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit{
 
-  constructor() {}
+  response = '';
+
+  constructor(private shake: Shake) {}
+
+  ngOnInit() {
+    const watch = this.shake.startWatch(60).subscribe(() => {
+      console.log('shaked!');
+      const chance = this.getRandomInt(responses.length);
+      this.response =  responses[chance];
+      });
+
+    // watch.unsubscribe();
+  }
+
+getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
+
 
 }

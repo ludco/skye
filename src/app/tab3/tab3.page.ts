@@ -16,6 +16,5 @@ export class Tab3Page {
   signOut(){
     this.authService.removeUserToken();
     this.store.dispatch(new UserUnLoad());
-    this.router.navigate(['']);
   }
 }

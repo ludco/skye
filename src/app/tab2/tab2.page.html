@@ -7,11 +7,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Oracle</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid style="height: 100%">
+    <ion-row>
+    <img src="assets/oracle.png"/>
+    </ion-row>
+   <div class="response">
+      <ion-text color="light">
+      {{response}}
+    </ion-text>
+  </div>
+   
+  </ion-grid>
+  <ion-text ></ion-text>
 </ion-content>
+
