@@ -6,8 +6,8 @@ import { Plugins } from '@capacitor/core';
 import { User } from 'src/app/models/User';
 import { UserLoad } from 'src/app/stores/user.store';
 import { Store } from '@ngxs/store';
-import { AuthService } from 'src/app/services/auth.service';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({

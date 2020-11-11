@@ -10,7 +10,6 @@ import { from, Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HTTP } from '@ionic-native/http/ngx';
 import { tap } from 'rxjs/operators';
-import { AuthService } from '../Services/auth.service';
 
 
 @Injectable()

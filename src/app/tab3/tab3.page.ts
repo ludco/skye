@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngxs/store';
-import { AuthService } from '../services/auth.service';
+
 import { UserUnLoad } from '../stores/user.store';
 
 @Component({
@@ -11,10 +11,10 @@ import { UserUnLoad } from '../stores/user.store';
 })
 export class Tab3Page {
 
-  constructor(private store: Store, private authService: AuthService, private router: Router) {}
+  constructor(private store: Store,  private router: Router) {}
 
   signOut(){
-    this.authService.removeUserToken();
+    // this.authService.removeUserToken();
     this.store.dispatch(new UserUnLoad());
   }
 }

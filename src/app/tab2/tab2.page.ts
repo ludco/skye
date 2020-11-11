@@ -30,6 +30,14 @@ getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: HoroscopPage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
+
 
 
 }

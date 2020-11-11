@@ -7,6 +7,8 @@ import { UserLoad , UserUnLoad} from 'src/app/stores/user.store';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { AuthService } from 'src/app/services/auth.service';
 
+
+
 @Component({
   selector: 'app-fbsignin',
   templateUrl: './fbsignin.component.html',
@@ -20,7 +22,8 @@ export class FBsigninComponent implements OnInit {
   constructor(private router: Router,
               private store: Store,
               private nativeStorage: NativeStorage,
-              private authService: AuthService) { }
+              private authService: AuthService
+             ) { }
 
   ngOnInit() {
   }

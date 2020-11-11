@@ -6,8 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import '@codetrix-studio/capacitor-google-auth';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { Store } from '@ngxs/store';
-import { AuthService } from './services/auth.service';
+
 import { UserLoad } from './stores/user.store';
+import { AuthService } from './services/auth.service';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class AppComponent {
     private nativeStorage: NativeStorage,
     private store: Store,
     private authService: AuthService
+
   ) {
     this.initializeApp();
   }

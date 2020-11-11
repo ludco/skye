@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AstroService } from '../services/astro.service';
 import {sunsigns} from '../shared/datas';
-import { HTTP } from '@ionic-native/http/ngx';
+
 
 @Component({
   selector: 'app-tab1',
