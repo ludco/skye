@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http/ngx';
+import { HttpConfigInterceptor } from './shared/request.interceptor';
+
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -37,14 +41,21 @@ if (!window['devToolsExtension'] && !window['__REDUX_DEVTOOLS_EXTENSION__']) {
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     NgxsModule.forRoot([UserStore]),
-    NgxsReduxDevtoolsPluginModule.forRoot(), ],
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    HttpClientModule, ],
 
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     NativeStorage,
-    Shake
+    Shake,
+    HTTP,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpConfigInterceptor,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent]
 })

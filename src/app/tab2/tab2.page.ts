@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Shake } from '@ionic-native/shake/ngx';
 import {responses} from '../shared/datas';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -11,7 +12,9 @@ export class Tab2Page implements OnInit{
 
   response = '';
 
-  constructor(private shake: Shake) {}
+  constructor(
+    private shake: Shake,
+    public modalController: ModalController) {}
 
   ngOnInit() {
     const watch = this.shake.startWatch(60).subscribe(() => {

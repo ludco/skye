@@ -20,4 +20,32 @@ export const responses  = [
     'Tu peux te brosser'
 ];
 
+export const sunsigns = [
+    {pic: 'assets/sunsigns/aries.png',
+    to: 'aries'},
+    {pic: 'assets/sunsigns/taurus.png',
+    to: 'taurus'},
+    {pic: 'assets/sunsigns/gemini.png',
+    to: 'gemini'},
+    {pic: 'assets/sunsigns/cancer.png',
+    to: 'cancer'},
+    {pic: 'assets/sunsigns/leo.png',
+    to: 'leo'},
+    {pic: 'assets/sunsigns/virgo.png',
+    to: 'virgo'},
+    {pic: 'assets/sunsigns/libra.png',
+    to: 'libra'},
+    {pic: 'assets/sunsigns/scorpio.png',
+    to: 'scorpio'},
+    {pic: 'assets/sunsigns/sagittarius.png',
+    to: 'sagittarius'},
+    {pic: 'assets/sunsigns/capricorn.png',
+    to: 'capricorn'},
+    {pic: 'assets/sunsigns/aquarius.png',
+    to: 'aquarius'},
+    {pic: 'assets/sunsigns/pisces.png',
+    to: 'pisces'},
+   
+];
+
 

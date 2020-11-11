@@ -1,0 +1,18 @@
+.zodiac {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+ion-grid {
+  height: 90%;
+
+  ion-row {
+    height: 20%;
+  }
+}
+
+ion-text {
+  font-size: 25px;
+}

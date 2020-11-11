@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AstroService } from '../services/astro.service';
+import {sunsigns} from '../shared/datas';
+import { HTTP } from '@ionic-native/http/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +10,12 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  sunsigns = sunsigns;
+  horoscop = '';
 
+  constructor(private astroService: AstroService) {}
+
+  openSign(sign){
+    this.astroService.getHoroscop(sign).subscribe(res => {this.horoscop = res.horoscope; console.log(this.horoscop); });
+  }
 }
