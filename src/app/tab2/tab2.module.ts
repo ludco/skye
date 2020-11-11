@@ -7,6 +7,7 @@ import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { SunsignComponent } from '../tab1/sunsign/sunsign.component';
 
 @NgModule({
   imports: [

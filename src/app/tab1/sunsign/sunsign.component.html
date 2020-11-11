@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button (click)="goBack()" fill="clear" slot="start">
+      <ion-icon name="chevron-back-outline" slot="start" color="light"></ion-icon>
+    </ion-button>
+    <ion-title>{{sign}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-grid>
+      <ion-row>
+        <div class="response">
+          <img [src]="imgUri">
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="response">
+          <ion-text color="light" class="ion-text-center">
+          {{horoscope}}
+          </ion-text>
+        </div>
+      </ion-row>
+  </ion-grid>
+</ion-content>
