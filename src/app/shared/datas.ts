@@ -12,10 +12,12 @@ export const responses  = [
     'C\'est clairement non',
     'Je suis fatigué',
     'Avec le COVID ? Tu rêves !!',
-    'Est-ce qu\'on peut rester sérieux?',
+    'Euh... Est-ce qu\'on peut rester sérieux ?',
     'Sûrement pas',
     'Mais ouiiiiiiiiii !!',
-    'J\'en suis convaincu'
+    'J\'en suis convaincu',
+    'Suis ta bonne étoile',
+    'Tu peux te brosser'
 ];
 
 
